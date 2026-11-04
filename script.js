@@ -19,7 +19,7 @@ const secondsElement = document.getElementById("seconds");
 // ==============================
 
 // Testing ke liye 10 seconds
-const birthdayDate = new Date("November 11, 2026 00:00:00").getTime();
+const birthdayDate = Date.now() + 10 * 1000;
 
 
 // ==============================
