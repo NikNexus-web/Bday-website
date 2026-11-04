@@ -1,0 +1,544 @@
+/* =========================
+   GLOBAL SETTINGS
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    width: 100%;
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    background: #050505;
+    color: #ffffff;
+    font-family: Georgia, 'Times New Roman', serif;
+    overflow-x: hidden;
+}
+
+.hidden {
+    display: none !important;
+}
+
+:root {
+    --gold: #d4af37;
+    --light-gold: #f2d77c;
+    --dark: #050505;
+}
+
+
+/* GOLD LINE */
+
+.gold-line {
+    width: 65px;
+    height: 2px;
+    background: var(--gold);
+    margin: 25px auto;
+}
+
+
+/* =========================
+   COUNTDOWN SCREEN
+========================= */
+
+.screen {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 25px 18px;
+    background:
+        radial-gradient(ellipse at center, #211a0b 0%, #090806 55%, #020202 100%);
+}
+
+.countdown-content {
+    width: 100%;
+    max-width: 700px;
+}
+
+.top-text,
+.reveal-top,
+.section-subtitle {
+    color: var(--gold);
+    font-size: 11px;
+    letter-spacing: 4px;
+    line-height: 1.8;
+}
+
+.countdown-content h1 {
+    font-size: clamp(38px, 7vw, 65px);
+    margin-top: 25px;
+    font-weight: normal;
+}
+
+.countdown-content h1 span {
+    color: var(--gold);
+}
+
+.subtitle {
+    color: #aaa;
+    font-size: 14px;
+    margin-top: 18px;
+    line-height: 1.7;
+}
+
+.countdown-content h2 {
+    color: var(--light-gold);
+    font-size: 17px;
+    letter-spacing: 4px;
+    font-weight: normal;
+    margin-top: 25px;
+}
+
+#timer {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin-top: 35px;
+}
+
+.time-box {
+    width: 95px;
+    min-height: 90px;
+    border: 1px solid #806524;
+    background: rgba(212, 175, 55, 0.05);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+}
+
+.time-box span {
+    font-size: 30px;
+    color: var(--light-gold);
+}
+
+.time-box small {
+    font-family: Arial, sans-serif;
+    font-size: 10px;
+    color: #aaa;
+    letter-spacing: 2px;
+}
+
+.bottom-text {
+    color: #a88932;
+    font-family: Arial, sans-serif;
+    font-size: 10px;
+    letter-spacing: 4px;
+    margin-top: 55px;
+}
+
+
+/* =========================
+   REVEAL SCREEN
+========================= */
+
+.reveal-content {
+    width: 100%;
+    max-width: 700px;
+    padding: 20px;
+    animation: fadeIn 1.2s ease;
+}
+
+.reveal-content h1 {
+    font-size: clamp(38px, 7vw, 70px);
+    font-weight: normal;
+    margin-top: 35px;
+}
+
+.reveal-content h2 {
+    font-size: clamp(40px, 8vw, 75px);
+    color: var(--gold);
+    letter-spacing: 5px;
+    margin-top: 10px;
+}
+
+.reveal-content h2 span {
+    color: #fff;
+}
+
+.reveal-message {
+    color: #bbb;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    line-height: 1.8;
+    margin: 25px auto 35px;
+    max-width: 450px;
+}
+
+#enterSurprise {
+    background: var(--gold);
+    color: #050505;
+    border: 1px solid var(--gold);
+    padding: 15px 30px;
+    font-size: 11px;
+    letter-spacing: 2px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#enterSurprise:hover {
+    background: transparent;
+    color: var(--gold);
+    box-shadow: 0 0 20px rgba(212, 175, 55, 0.2);
+}
+
+.reveal-signature {
+    color: var(--gold);
+    font-family: Arial, sans-serif;
+    font-size: 10px;
+    letter-spacing: 4px;
+    margin-top: 45px;
+}
+
+
+/* =========================
+   MAIN HERO SECTION
+========================= */
+
+.hero-section {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 50px 20px;
+    background:
+        radial-gradient(ellipse at center, #241b0a 0%, #080705 55%, #020202 100%);
+}
+
+.hero-section h1 {
+    font-size: clamp(38px, 6vw, 65px);
+    font-weight: normal;
+    margin-top: 15px;
+}
+
+.hero-section h2 {
+    font-size: clamp(42px, 7vw, 75px);
+    color: var(--gold);
+    letter-spacing: 5px;
+    margin-top: 10px;
+}
+
+.hero-section h2 span {
+    color: white;
+}
+
+.hero-message {
+    color: #bbb;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    line-height: 1.8;
+    max-width: 520px;
+    margin: 25px auto;
+}
+
+.hero-signature {
+    color: var(--gold);
+    font-family: Arial, sans-serif;
+    font-size: 10px;
+    letter-spacing: 4px;
+    margin-bottom: 35px;
+}
+
+.gold-button {
+    display: inline-block;
+    text-decoration: none;
+    color: #050505;
+    background: var(--gold);
+    padding: 14px 25px;
+    font-family: Arial, sans-serif;
+    font-size: 10px;
+    letter-spacing: 2px;
+    transition: 0.3s;
+}
+
+.gold-button:hover {
+    color: var(--gold);
+    background: transparent;
+    outline: 1px solid var(--gold);
+}
+
+
+/* =========================
+   PHOTO GALLERY
+========================= */
+
+.gallery-section {
+    width: 100%;
+    padding: 75px 20px;
+    text-align: center;
+    background: #080808;
+}
+
+.gallery-section h2,
+.video-section h2,
+.letter-section h2 {
+    color: var(--light-gold);
+    font-size: clamp(24px, 4vw, 36px);
+    font-weight: normal;
+    margin: 20px auto 35px;
+    line-height: 1.4;
+}
+
+.photo-gallery {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 15px;
+    width: 100%;
+    max-width: 1000px;
+    margin: auto;
+}
+
+.photo-gallery img {
+    display: block;
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+    border: 1px solid #806524;
+    transition: 0.3s;
+}
+
+.photo-gallery img:hover {
+    transform: scale(1.025);
+    box-shadow: 0 0 20px rgba(212, 175, 55, 0.2);
+}
+
+
+/* =========================
+   VIDEO SECTION
+========================= */
+
+.video-section {
+    width: 100%;
+    padding: 75px 20px;
+    text-align: center;
+    background: #100d08;
+}
+
+.video-container {
+    width: 100%;
+    max-width: 700px;
+    margin: auto;
+    padding: 7px;
+    border: 1px solid var(--gold);
+    box-shadow: 0 0 25px rgba(212, 175, 55, 0.12);
+}
+
+.video-container video {
+    display: block;
+    width: 100%;
+    max-height: 450px;
+    background: #000;
+    object-fit: contain;
+}
+
+
+/* =========================
+   LOVE LETTER
+========================= */
+
+.letter-section {
+    width: 100%;
+    padding: 75px 20px;
+    text-align: center;
+    background: #080808;
+}
+
+.letter-card {
+    width: 100%;
+    max-width: 600px;
+    margin: auto;
+    padding: 35px 25px;
+    border: 1px solid #806524;
+    background: linear-gradient(145deg, #17130b, #090909);
+    color: #ccc;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    line-height: 1.9;
+}
+
+.letter-card p {
+    margin-bottom: 18px;
+}
+
+.letter-card h3 {
+    color: var(--gold);
+    font-family: Georgia, serif;
+    font-weight: normal;
+    margin-top: 25px;
+}
+
+.letter-card h2 {
+    color: var(--light-gold);
+    font-size: 22px;
+    margin-top: 15px;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+.birthday-footer {
+    width: 100%;
+    padding: 45px 20px;
+    text-align: center;
+    background: #030303;
+    border-top: 1px solid #725a23;
+}
+
+.birthday-footer h2 {
+    color: var(--light-gold);
+    font-size: clamp(22px, 4vw, 32px);
+    font-weight: normal;
+    margin-bottom: 20px;
+}
+
+.birthday-footer p {
+    color: var(--gold);
+    font-family: Arial, sans-serif;
+    font-size: 10px;
+    letter-spacing: 3px;
+    margin-bottom: 15px;
+}
+
+.birthday-footer small {
+    color: #777;
+    font-family: Arial, sans-serif;
+    font-size: 10px;
+    letter-spacing: 2px;
+}
+
+
+/* =========================
+   TABLET RESPONSIVE
+========================= */
+
+@media (max-width: 768px) {
+
+    .photo-gallery {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+    }
+
+    .photo-gallery img {
+        height: 200px;
+    }
+
+    .gallery-section,
+    .video-section,
+    .letter-section {
+        padding: 55px 18px;
+    }
+
+    .time-box {
+        width: 75px;
+        min-height: 80px;
+    }
+
+    .time-box span {
+        font-size: 25px;
+    }
+
+}
+
+
+/* =========================
+   SMALL MOBILE RESPONSIVE
+========================= */
+
+@media (max-width: 400px) {
+
+    .photo-gallery img {
+        height: 150px;
+    }
+
+    #timer {
+        gap: 8px;
+    }
+
+    .time-box {
+        width: 65px;
+        min-height: 75px;
+    }
+
+    .time-box span {
+        font-size: 22px;
+    }
+
+    .top-text,
+    .reveal-top,
+    .section-subtitle {
+        font-size: 9px;
+        letter-spacing: 2px;
+    }
+
+    .letter-card {
+        padding: 25px 16px;
+    }
+
+}
+
+
+/* ANIMATION */
+
+@keyframes fadeIn {
+
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+#snehaVideo {
+    display: block;
+    width: 100%;
+    max-width: 700px;
+    height: auto;
+    min-height: 250px;
+    margin: 20px auto;
+    background: #000;
+    object-fit: contain;
+}
+.video-container {
+    width: 90%;
+    max-width: 750px;
+    margin: 40px auto;
+    text-align: center;
+}
+
+#snehaVideo {
+    width: 100%;
+    height: auto;
+    display: block;
+    background: #000;
+    object-fit: contain;
+    border-radius: 15px;
+}
+#snehaVideo {
+    width: 100%;
+    max-width: 750px;
+    height: auto;
+    display: block;
+    margin: 20px auto;
+    background: #000;
+    border-radius: 15px;
+}
